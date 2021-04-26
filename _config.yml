@@ -1,0 +1,22 @@
+safe: false
+permalink: /:title.html
+exclude:
+  - README.md
+
+name: Keptab Blog
+host: localhost
+desc: everything about keptab
+
+meta:
+    author:
+        name: Keptab Team
+        email: hi@keptab.com
+        about: We create the Project Keptab
+    
+    disqus:
+        shortname: keptab
+        embedjs: https://keptab.disqus.com/embed.js
+
+    google:
+        analytics: UA-123456-1
+        analyticsjs: https://www.google-analytics.com/analytics.js

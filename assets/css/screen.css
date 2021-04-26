@@ -1,0 +1,761 @@
+/**
+ * screen.css v0.1.0
+ * (c) 2021 Keptab. All rights reserved.
+ */
+
+
+/**
+ * Reboot Bootstrap v4.2.1
+ * MIT License
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+  text-decoration-skip-ink: none;
+}
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+dt {
+  font-weight: 700;
+}
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0;
+}
+blockquote {
+  margin: 0 0 1rem;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -.25em;
+}
+sup {
+  top: -.5em;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+figure {
+  margin: 0 0 1rem;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+button {
+  border-radius: 0;
+}
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+output {
+  display: inline-block;
+}
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none !important;
+}
+
+
+/**
+ * global style for keptab
+ * (c) keptab.com
+ */
+
+html {
+	font-size: 62.5%; /* 1rem=10px */
+}
+body, input, textarea, td, button {
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important;
+	font-size: 1.6rem; /* 1.4rem=14px */
+}
+code, pre {
+	font-size: 1.6rem; /* 1.4rem=14px */
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+img {
+	vertical-align: middle;
+	line-height: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.5rem;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+
+@media screen and (min-width: 1024px) {
+    #main {
+        position: relative;
+        width: 62%;
+        padding: 2em 3em;
+    }
+    #aside {
+        position: fixed;
+        left: 62%;
+        top: 0;
+        right: 0;
+        height: 100%;
+        overflow: hidden;
+        padding: 2em 3em;
+        box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1) inset;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #main {
+        padding: 1em;
+    }
+    #aside {
+        padding: 1em;
+    }
+}
+
+
+#aside {
+    background-color: #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * markdown github.com style
+ * (c) github.com
+ */
+
+.markdown {
+    /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+    line-height: 150%;
+    font-size: 16px; /* 1.4rem=14px*/
+    word-wrap: break-word;
+}
+.markdown::before {
+	display: table;
+	content: ""
+}
+.markdown::after {
+	display: table;
+	clear: both;
+	content: ""
+}
+.markdown>*:first-child {
+	margin-top: 0 !important
+}
+.markdown>*:last-child {
+	margin-bottom: 0 !important
+}
+.markdown a:not([href]) {
+	color: inherit;
+	text-decoration: none
+}
+.markdown .header-link {
+	float: left;
+	/*padding-right: 4px;*/
+	margin-left: -25px;
+	line-height: 1.0
+}
+.markdown .header-link:focus {
+	outline: none
+}
+.markdown p,
+.markdown blockquote,
+.markdown ul,
+.markdown ol,
+.markdown dl,
+.markdown table,
+.markdown pre {
+	margin-top: 0;
+	margin-bottom: 16px
+}
+.markdown hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0
+}
+.markdown blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5
+}
+.markdown blockquote>:first-child {
+	margin-top: 0
+}
+.markdown blockquote>:last-child {
+	margin-bottom: 0
+}
+.markdown kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25
+}
+.markdown h1 .anchor,
+.markdown h2 .anchor,
+.markdown h3 .anchor,
+.markdown h4 .anchor,
+.markdown h5 .anchor,
+.markdown h6 .anchor {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden
+}
+.markdown h1:hover .header-link,
+.markdown h2:hover .header-link,
+.markdown h3:hover .header-link,
+.markdown h4:hover .header-link,
+.markdown h5:hover .header-link,
+.markdown h6:hover .header-link {
+	text-decoration: none
+}
+.markdown h1:hover .header-link .anchor,
+.markdown h2:hover .header-link .anchor,
+.markdown h3:hover .header-link .anchor,
+.markdown h4:hover .header-link .anchor,
+.markdown h5:hover .header-link .anchor,
+.markdown h6:hover .header-link .anchor {
+	visibility: visible
+}
+.markdown h1 tt,
+.markdown h1 code,
+.markdown h2 tt,
+.markdown h2 code,
+.markdown h3 tt,
+.markdown h3 code,
+.markdown h4 tt,
+.markdown h4 code,
+.markdown h5 tt,
+.markdown h5 code,
+.markdown h6 tt,
+.markdown h6 code {
+	font-size: inherit
+}
+.markdown h1 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	/*font-size: 2em;*/
+	/*border-bottom: 1px solid #eaecef*/
+}
+.markdown h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.25em;
+	/*font-size: 1.5em;*/
+	/*border-bottom: 1px solid #eaecef*/
+}
+.markdown h3 {
+	/*font-size: 1.25em*/
+	font-size: 1.1em;
+}
+.markdown h4 {
+	font-size: 1em
+}
+.markdown h5 {
+	font-size: 0.875em
+}
+.markdown h6 {
+	font-size: 0.85em;
+	color: #6a737d
+}
+.markdown ul,
+.markdown ol {
+	padding-left: 2em
+}
+.markdown ul ul,
+.markdown ul ol,
+.markdown ol ol,
+.markdown ol ul {
+	margin-top: 0;
+	margin-bottom: 0
+}
+.markdown li>p {
+	margin-top: 16px
+}
+.markdown li+li {
+	margin-top: 0.25em
+}
+.markdown dl {
+	padding: 0
+}
+.markdown dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600
+}
+.markdown dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px
+}
+.markdown table {
+	display: block;
+	width: 100%;
+	overflow: auto
+}
+.markdown table th {
+	font-weight: 600
+}
+.markdown table th,
+.markdown table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5
+}
+.markdown table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1
+}
+.markdown table tr:nth-child(2n) {
+	background-color: #f6f8fa
+}
+.markdown table img {
+	background-color: transparent
+}
+.markdown img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff
+}
+.markdown img[align=right] {
+	padding-left: 20px
+}
+.markdown img[align=left] {
+	padding-right: 20px
+}
+.markdown .emoji {
+	max-width: none;
+	vertical-align: text-top;
+	background-color: transparent
+}
+.markdown code,
+.markdown tt {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px
+}
+.markdown code::before,
+.markdown code::after,
+.markdown tt::before,
+.markdown tt::after {
+	letter-spacing: -0.2em;
+	content: "\00a0"
+}
+.markdown code br,
+.markdown tt br {
+	display: none
+}
+.markdown del code {
+	text-decoration: inherit
+}
+.markdown pre {
+	word-wrap: normal
+}
+.markdown pre > code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0
+}
+.markdown pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+	border: 1px solid #e1e1e1
+}
+.markdown pre code,
+.markdown pre tt {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0
+}
+.markdown pre code::before,
+.markdown pre code::after,
+.markdown pre tt::before,
+.markdown pre tt::after {
+	content: normal
+}
+.markdown code, 
+.markdown kbd, 
+.markdown pre, 
+.markdown samp {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 14px !important;
+}
+
+
+/**
+ * highlight github.com style 
+ * (c) Vasily Polovnyov <vast@whiteants.net>
+ */
+
+pre code {
+    display: block; padding: 0.5em;
+    color: #000;
+    background: #f8f8ff
+}
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+    color: #998;
+    font-style: italic
+}
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .lisp .title,
+pre .subst {
+    color: #000;
+    font-weight: bold
+}
+pre .number,
+pre .hexcolor {
+    color: #40a070
+}
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+    color: #d14
+}
+pre .title,
+pre .id {
+    color: #900;
+    font-weight: bold
+}
+pre .javascript .title,
+pre .lisp .title,
+pre .subst {
+    font-weight: normal
+}
+pre .class .title,
+pre .haskell .label,
+pre .tex .command {
+    color: #458;
+    font-weight: bold
+}
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+    color: #000080;
+    font-weight: normal
+}
+pre .attribute,
+pre .variable,
+pre .instancevar,
+pre .lisp .body {
+    color: #008080
+}
+pre .regexp {
+    color: #009926
+}
+pre .class {
+    color: #458;
+    font-weight: bold
+}
+pre .symbol,
+pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .lisp .keyword,
+pre .tex .special,
+pre .input_number {
+    color: #990073
+}
+pre .builtin,
+pre .built_in,
+pre .lisp .title {
+    color: #0086b3
+}
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+    color: #999;
+    font-weight: bold
+}
+pre .deletion {
+    background: #fdd
+}
+pre .addition {
+    background: #dfd
+}
+pre .diff .change {
+    background: #0086b3
+}
+pre .chunk {
+    color: #aaa
+}
+pre .tex .formula {
+    opacity: 0.5;
+}
+  
