@@ -421,8 +421,10 @@ h6 { font-size: 1rem; }
     padding: 0.5em 1em;
 }
 
+#disqus_thread { margin: 2em 0; }
 
-#game404 { min-height: 450px; }
+#game404 { min-height: 450px; margin-bottom: 2em; }
+#game404 #a { height: 600px; width: 600px; }
 #game404 .footnote { color: #999; }
 
 

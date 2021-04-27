@@ -88,10 +88,10 @@
     </div>
     
     <script type="text/javascript" id="js-conf">
-        window.analytics = '{{ site.meta.google.analytics }}'
-        window.analyticsJs = '{{ site.meta.google.analyticsjs }}'
-        window.shortname = '{{ site.meta.disqus.shortname }}'
-        window.embedjs = '{{ site.meta.disqus.embedjs }}'
+        window.google_analytics = '{{ site.meta.google.analytics }}'
+        window.google_analyticsjs = '{{ site.meta.google.analyticsjs }}'
+        window.disqus_shortname = '{{ site.meta.disqus.shortname }}'
+        window.disqus_embedjs = '{{ site.meta.disqus.embedjs }}'
     </script>
     <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}" id="js-main"></script>
     {% for script in page.scripts %}<script src="{{ script }}"></script>
