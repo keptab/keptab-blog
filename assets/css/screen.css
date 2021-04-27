@@ -305,49 +305,125 @@ h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1300px) {
+    #app {
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        background-color: #eee;
+    }
     #main {
-        position: relative;
-        width: 62%;
+        width: 70%;
+        max-width: 850px;
         padding: 2em 3em;
+        background-color: #fff;
     }
     #aside {
-        position: fixed;
-        left: 62%;
-        top: 0;
-        right: 0;
-        height: 100%;
-        overflow: hidden;
+        max-width: 450px;
         padding: 2em 3em;
         box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1) inset;
     }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1300px) {
     #main {
         padding: 1em;
     }
     #aside {
         padding: 1em;
     }
+    #footer { display: none; }
 }
 
 
-#aside {
-    background-color: #eee;
+#header { margin-left: 75px; }
+#header .brand { position: relative; }
+#header .brand:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    margin-left: -75px;
+    margin-top: -5px;
+    width: 64px;
+    height: 64px;
+    background: url("/assets/img/logo-64x64.png") no-repeat center center;
+}
+#header .desc { color: #999; font-weight: normal; }
+
+#aside { background-color: #eee; }
+#aside .brand { margin-bottom: 1em; }
+#aside .brand a { text-decoration: none; }
+#aside .brand .feed-link {
+    display: inline-block;
+    text-indent: -999em;
+    width: 16px;
+    height: 16px;
+    background: url("/assets/img/feed.svg") no-repeat center center;
+}
+#aside .block { max-width: 450px; margin: 1em 0; }
+#aside .block h3 { margin: 1.5em 0 0.5em 0; }
+#aside .block-about p { margin: 0.5em 0; color:#999; }
+#aside .block-about figure img { border-radius: 2px; }
+#aside .block-about figcaption { margin: 0.2em 0; }
+#aside .block-about figcaption:after { 
+    content: '<hi@keptab.com>'; 
+    padding-left: 0.5em; 
+    color: #bbb; 
+    font-weight: bold; 
+}
+#aside .block-network a { display: block; }
+#aside .block-network a.fork { color: #999; }
+#aside .block-foot {
+    border-top: 1px solid #ddd;
+    color: #999;
+    font-size: 1.4rem;
+    margin-top: 4em;
+    padding-top: 1em;
 }
 
 
 
+#footer {
+    border-top: 1px solid #eee;
+    color: #999;
+    font-size: 1.4rem;
+    margin-top: 4em;
+    padding-top: 1em;
+}
 
 
+#search-input {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 80%;
+}
+#search-input:focus, #search-input:focus-visible {
+    outline: none;
+}
 
 
+.breadcrumbs { color: #999; margin-bottom: 1em;}
+
+.article { margin: 2em 0; }
+.article > h1:first-child { margin: 0; }
+.article .article-meta {
+    color: #999;
+    line-height: 150%;
+    margin: 0.5em 0.2em;
+}
+.article .article-meta:last-child { margin-bottom: 0; }
+.article .article-content { margin: 2em 0; }
+.article .article-permalink {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+    padding: 0.5em 1em;
+}
 
 
-
-
-
+#game404 { min-height: 450px; }
+#game404 .footnote { color: #999; }
 
 
 /**

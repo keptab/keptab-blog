@@ -4,19 +4,26 @@ exclude:
   - README.md
 
 name: Keptab Blog
-host: localhost
 desc: everything about keptab
 
 meta:
     author:
         name: Keptab Team
         email: hi@keptab.com
-        about: We create the Project Keptab
+        about: We create the Project Keptab, and the story behind Keptab
     
     disqus:
         shortname: keptab
         embedjs: https://keptab.disqus.com/embed.js
 
+    github:
+        name: keptab
+        fork: https://github.com/keptab/keptab-blog
+
     google:
         analytics: UA-123456-1
         analyticsjs: https://www.google-analytics.com/analytics.js
+    
+    twitter:
+        name: keptab
+        follow: https://twitter.com/keptab

@@ -1,18 +1,24 @@
 ---
-layout: page
+layout: default
 
 class: page-type-post
 
 ---
 
-<div class="trace">/ <a href="/">{{ site.name }}</a> / {{ page.title }}</div>
+<div class="breadcrumbs">/ <a href="/">{{ site.name }}</a> / {{ page.title }}</div>
 
-<article>
-	<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+<article class="article">
+	<h1 class="article-title">
+		<a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
+	</h1>
 	{% assign post = page %}
 	{% include meta.html %}
-	{{ content }}
-	{% capture permaurl %}http://{{site.host}}{{ page.url }}{% endcapture %}
-	<!--<p class="permalink">永久链接：<a href="{{ permaurl }}">{{ permaurl }}</a></p>-->
+	<div class="article-content markdown">
+		{{ content }}
+	</div>
+	{% capture permaurl %}{{ page.url | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+	<p class="article-permalink">
+		<span title="permanent link for {{ page.title }}">Permanent Link: <a href="{{ permaurl }}">{{ permaurl }}</a></span>
+	</p>
 </article>
 <div id="disqus_thread" class="comments"></div>
