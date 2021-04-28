@@ -6,6 +6,17 @@ exclude:
 name: Keptab Blog
 desc: everything about keptab
 
+custom:
+    links:
+        - name: Keptab Apps
+          link: https://keptab.com/apps
+        
+        - name: Keptab FAQ
+          link: https://keptab.com/faq
+
+        - name: Keptab Feedback
+          link: https://keptab.com/feedback
+
 meta:
     author:
         name: Keptab Team

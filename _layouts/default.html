@@ -36,12 +36,15 @@
                     <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url  }}" class="feed-link" title="Subscribe {{ site.name }}">Subscribe</a>
                 </h2>
                 
+                {% if site.custom.links %}
                 <nav class="block block-links">
-                    <ul>
-                    {% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/category/{{ category.name }}/">{{ category.title }}</a></li>
+                    <h3>Links</h3>
+                    <ul class="links">
+                    {% for link in site.custom.links %}<li><a href="{{ link.link }}/">{{ link.name }}</a></li>
                     {% endfor %}
                     </ul>
                 </nav>
+                {% endif %}
                 
                 <div class="block block-search">
                     <h3>Search</h3>
