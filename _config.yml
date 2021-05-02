@@ -4,7 +4,7 @@ exclude:
   - README.md
 
 name: Keptab Blog
-desc: everything about keptab
+desc: everything about Keptab
 
 custom:
     links:
@@ -21,7 +21,7 @@ meta:
     author:
         name: Keptab Team
         email: hi@keptab.com
-        about: We create the Project Keptab, and the story behind Keptab
+        about: We create the Project Keptab, and share the story behind Keptab
     
     disqus:
         shortname: keptab
